@@ -1,9 +1,9 @@
-local mob_class = mob_test.mob_class
+local mob_class = super_path_mobs.mob_class
 
 
 
 function mob_class:build_house(name, pos, inv, selfpos)
-  local modpath = minetest.get_modpath("mob_test").."/schems/"..name..".mts"
+  local modpath = minetest.get_modpath("super_path_mobs").."/schems/"..name..".mts"
   local schemdata = minetest.read_schematic(modpath, {})
 
   if not self.HOUSE then

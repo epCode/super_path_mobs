@@ -1,4 +1,4 @@
-local mob_class = mob_test.mob_class
+local mob_class = super_path_mobs.mob_class
 
 function mob_class:set_animation(name)
   if self.animations and self.animations[name] then

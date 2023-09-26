@@ -1,17 +1,17 @@
-mob_test = {}
-mob_test.mob_class = {}
-mob_test.mob_class_meta = {__index = mob_test.mob_class}
-local mob_class = mob_test.mob_class
+super_path_mobs = {}
+super_path_mobs.mob_class = {}
+super_path_mobs.mob_class_meta = {__index = super_path_mobs.mob_class}
+local mob_class = super_path_mobs.mob_class
 
-dofile(minetest.get_modpath("mob_test") .. "/entinvs.lua")
-dofile(minetest.get_modpath("mob_test") .. "/inventory.lua")
-dofile(minetest.get_modpath("mob_test") .. "/animation.lua")
-dofile(minetest.get_modpath("mob_test") .. "/movement.lua")
-dofile(minetest.get_modpath("mob_test") .. "/settlement.lua")
-dofile(minetest.get_modpath("mob_test") .. "/head_logic.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/entinvs.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/inventory.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/animation.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/movement.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/settlement.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/head_logic.lua")
 
 
-function mob_test.register_mob(name, def)
+function super_path_mobs.register_mob(name, def)
   complete_mob_definition = {
     hp_min = def.hp_min,
     hp_max = def.hp_max,
@@ -121,13 +121,13 @@ function mob_test.register_mob(name, def)
       self.object:add_velocity(kb)
     end,
   }
-  minetest.register_entity("mob_test:"..name,setmetatable(complete_mob_definition, mob_test.mob_class_meta))
+  minetest.register_entity("super_path_mobs:"..name,setmetatable(complete_mob_definition, super_path_mobs.mob_class_meta))
 
   if def.inventory then
-    mcl_entity_invs.register_inv("mob_test:"..name,def.inventory.title,def.inventory.size,def.inventory.show--[[enable]],true)
+    mcl_entity_invs.register_inv("super_path_mobs:"..name,def.inventory.title,def.inventory.size,def.inventory.show--[[enable]],true)
   end
 end
 
 
 
-dofile(minetest.get_modpath("mob_test") .. "/register_example.lua")
+dofile(minetest.get_modpath("super_path_mobs") .. "/register_example.lua")

@@ -1,4 +1,4 @@
-mob_test.register_mob("man", {
+super_path_mobs.register_mob("man", {
   hp_min = 200,
   hp_max = 200,
   physical = true,

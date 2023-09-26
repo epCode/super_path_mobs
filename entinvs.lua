@@ -2,7 +2,7 @@
 ##### by Cora #####
 ]]
 
-function mob_test.get_itemslot_bg(x, y, w, h)
+function super_path_mobs.get_itemslot_bg(x, y, w, h)
 	local out = ""
 	for i = 0, w - 1, 1 do
 		for j = 0, h - 1, 1 do
@@ -100,13 +100,13 @@ local function load_default_formspec (ent, text)
 			.. "label[0,0;" .. minetest.formspec_escape(
 			minetest.colorize("#313131", ent._inv_title .. " ".. text)) .. "]"
 			.. "list[detached:"..ent._inv_id..";main;"..spacing..",0.5;"..cols..","..rows..";]"
-			--.. mob_test.get_itemslot_bg(spacing,0.5,cols,rows)
+			--.. super_path_mobs.get_itemslot_bg(spacing,0.5,cols,rows)
 			.. "label[0,4.0;" .. minetest.formspec_escape(
 			minetest.colorize("#313131", "Inventory")) .. "]"
 			.. "list[current_player;main;0,4.5;9,3;9]"
-			--.. mob_test.get_itemslot_bg(0,4.5,9,3)
+			--.. super_path_mobs.get_itemslot_bg(0,4.5,9,3)
 			.. "list[current_player;main;0,7.74;9,1;]"
-			--.. mob_test.get_itemslot_bg(0,7.74,9,1)
+			--.. super_path_mobs.get_itemslot_bg(0,7.74,9,1)
 			.. "listring[detached:"..ent._inv_id..";main]"
 			.. "listring[current_player;main]"
 	return formspec

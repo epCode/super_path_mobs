@@ -1,4 +1,4 @@
-local mob_class = mob_test.mob_class
+local mob_class = super_path_mobs.mob_class
 
 function mob_class:goto_pos(selfpos, pos) -- walk toward a position (used for pathfinding)
   if pos and vector.distance(selfpos, pos)>0.7 then

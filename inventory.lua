@@ -1,4 +1,4 @@
-local mob_class = mob_test.mob_class
+local mob_class = super_path_mobs.mob_class
 
 function mob_class:get_pickup(inv, pos) -- walk toward a position (used for pathfinding)
   for _,obj in pairs(minetest.get_objects_inside_radius(pos, 2)) do
